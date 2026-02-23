@@ -39,7 +39,7 @@ mv sourcefile destinationfile
 ## Examples
 
 ### Rename files
-mv file1.txt file
+mv file1.txt file.txt
 
 Explaination: File1 will overwrtite the file. Here only **file1** name is changes to **file**. 
 Contents of file1 unchanged but file contents erased.
