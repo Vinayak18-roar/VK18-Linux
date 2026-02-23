@@ -45,3 +45,4 @@ Explaination: File1 will overwrtite the file. Here only **file1** name is change
 Contents of file1 unchanged but file contents erased.
 
 Remember: Whenever using mv between two files check whether do you want contents of destination file or not.
+
