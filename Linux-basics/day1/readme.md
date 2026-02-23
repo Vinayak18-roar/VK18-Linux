@@ -1,7 +1,7 @@
 ## Day1 practiced basics of linux:
 
 - pwd     : Print working directory.
-- cd      : Chnage directory.
+- cd      : Chanage directory.
 - cd ..   : It will bring to parent directory.
 - cd .    : To be in current directory.
 - cd /    : To go to root directory.
