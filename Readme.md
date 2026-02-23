@@ -7,7 +7,7 @@ The touch command is used to create empty files in Linux.
 
 It can also update the timestamp of existing files.
 
-**#Syntax**
+## Syntax
 touch filename
 
 ## What it will do
@@ -32,8 +32,9 @@ mv is used to rename and move the files and folders.
 ## Syntax
 mv sourcefile destinationfile
 
--Sourcefile: which file you want to rename/move.
--Destinationfile: where you have to move inside or what you to rename it for.
+- Sourcefile: which file you want to rename/move.
+
+- Destinationfile: where you have to move inside or what you to rename it for.
 
 ## Examples
 
