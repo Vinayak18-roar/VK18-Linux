@@ -1,1 +1,1 @@
-Day2: practice: touch and mv
+Day2: practiced touch and mv
