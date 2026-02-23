@@ -50,3 +50,38 @@ Remember: Whenever using mv between two files check whether do you want contents
 
 - Creating file using: touch
 - rename files using: mv
+
+## command mkdir
+mkdir: It's used to create folders.
+
+## synatx
+
+mkdir <foldername>
+
+## Examples
+
+**Single folder creation**.
+
+mkdir <foldername>
+
+Ex: mkdir dir1
+
+**Multiple folder creation**
+
+mkdir <folder1> <folder2> <folder3>
+
+ex: mkdir dir1 dir2 testdir
+
+## mv on folders
+
+- To rename or move folders.
+
+## Syntax
+
+mv sourcefile destinationfile
+
+## examples
+
+mv dir1 testdir
+
+explaination: We placed **dir1** folder into **testdir** folder.
