@@ -48,6 +48,7 @@ practice.txt  readme.md
 total 0
 -rw-rw-rw- 1 codespace codespace 0 Feb 24 12:44 practice.txt
 -rw-rw-rw- 1 codespace codespace 0 Feb 24 12:44 readme.md
+
 @Vinayak18-roar ➜ /workspaces/VK18-Linux/Linux-basics/day3 (main) $ ls -lh
 total 0
 -rw-rw-rw- 1 codespace codespace 0 Feb 24 12:44 practice.txt
@@ -75,8 +76,10 @@ By using **echo** command we can store contents in files.
 
 @Vinayak18-roar ➜ /workspaces/VK18-Linux/Linux-basics/day3 (main) $ cat file.txt
 Hi, I'm from file.txt
+
 @Vinayak18-roar ➜ /workspaces/VK18-Linux/Linux-basics/day3 (main) $ cat file1.txt
 Hi, I'm from file1.txt
+
 @Vinayak18-roar ➜ /workspaces/VK18-Linux/Linux-basics/day3 (main) $ cat file2.txt
 Hi, I'm from file2.txt
 
@@ -109,7 +112,8 @@ And file.txt overwrite the contents of file1.txt
 file1.txt content overwritten by file.txt
 
 **Remember**: Whenever using mv on files sourcefile name only change(rename) to destinationfile. And erase the contents of destinationfile.
--Unchanged the contents in sourcefile.
+
+- Unchanged the contents in sourcefile.
 
 @Vinayak18-roar ➜ /workspaces/VK18-Linux/Linux-basics/day3 (main) $ cat file1.txt
 Hi, I'm from file.txt
