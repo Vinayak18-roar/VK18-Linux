@@ -1,1 +1,2 @@
-Day4: work on folders with mv command
+Day4: worked on folders with mv command
+Creating folders using mkdir command
