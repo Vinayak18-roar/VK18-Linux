@@ -67,8 +67,8 @@ To pratcie created some files and verified by ls:
 @Vinayak18-roar ➜ /workspaces/VK18-Linux/Linux-basics/day3 (main) $ touch file.txt file1.txt file2.txt
 
 @Vinayak18-roar ➜ /workspaces/VK18-Linux/Linux-basics/day3 (main) $ ls
-f
-ile.txt  file1.txt  file2.txt  practice.txt  readme.md
+
+file.txt  file1.txt  file2.txt  practice.txt  readme.md
 
 ## Storing contents inside files.
 
@@ -127,7 +127,7 @@ file1.txt content overwritten by file.txt
 
 **Remember**: Whenever using mv on files sourcefile name only change(rename) to destinationfile. And erase the contents of destinationfile.
 
-- Unchanged the contents in sourcefile.
+- Sourcefile content unchanged. if we check **file1.txt** content will see **file.txt** contents check below:
 
 @Vinayak18-roar ➜ /workspaces/VK18-Linux/Linux-basics/day3 (main) $ cat file1.txt
 
@@ -139,6 +139,8 @@ Hi, I'm from file.txt
 
 file1.txt  practice.txt  readme.md
 
+- Now **file1.txt** contents overwritten by **file2.txt** contents.
+  
 @Vinayak18-roar ➜ /workspaces/VK18-Linux/Linux-basics/day3 (main) $ cat file1.txt
 
 Hi, I'm from file2.txt
@@ -147,15 +149,17 @@ Hi, I'm from file2.txt
 
 file1.txt  practice.txt  readme.md
 
+- Now bring back to **file.txt**. But notice here currently **file.txt** is non-existing file.
+  
+- If existing or non existing file will be rename.
+  
 @Vinayak18-roar ➜ /workspaces/VK18-Linux/Linux-basics/day3 (main) $ mv file1.txt file.txt
 
 @Vinayak18-roar ➜ /workspaces/VK18-Linux/Linux-basics/day3 (main) $ ls
 
 file.txt  practice.txt  readme.md
 
-@Vinayak18-roar ➜ /workspaces/VK18-Linux/Linux-basics/day3 (main) $ ls
-
-file.txt  practice.txt  readme.md
+- file1 has file2 contents so that will be visible in file.
 
 @Vinayak18-roar ➜ /workspaces/VK18-Linux/Linux-basics/day3 (main) $ cat file.txt
 
