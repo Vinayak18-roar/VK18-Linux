@@ -122,7 +122,9 @@ Now checking contents of file1.txt. It has file.txt contents.
 Note that -sourcefile content will not erase only file name will rename by destinationfile.
 
 And file.txt overwrite the contents of file1.txt
+
                     OR
+                    
 file1.txt content overwritten by file.txt
 
 **Remember**: Whenever using mv on files sourcefile name only change(rename) to destinationfile. And erase the contents of destinationfile.
