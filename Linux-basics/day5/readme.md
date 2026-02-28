@@ -18,7 +18,7 @@ file
 - Let's say we have a file called file.txt, If you want to view the inode
 number of file.txt
 
-Then you just type **ls i file1.txt**
+Then you just type **ls i file.txt**
 
 - And so typing **ls i** will show allthe inode numbers in your current directory
 
