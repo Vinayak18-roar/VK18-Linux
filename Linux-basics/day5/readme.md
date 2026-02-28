@@ -114,3 +114,94 @@ total 12
 1573163 -rw-rw-rw-  1 codespace codespace    0 Feb 27 06:54 practice.txt
 1573223 -rw-rw-rw-  1 codespace codespace    0 Feb 27 06:54 readme.md
 
+Note: Hardlink is not allowed for **FOLDERS**
+
+- If you try hardlink on folder (dir):
+
+@Vinayak18-roar ➜ /workspaces/VK18-Linux/Linux-basics/day5 (main) $ ln dir hardlinkdir
+
+ln: dir: hard link not allowed for directory.
+
+----
+
+## SOFT LINK
+
+A soft link is simply a pointer to another file. (Just like shortcut in windows)
+
+To create a soft link we use the **-s** option
+
+### Syntax
+**ln -s originalfile linknsme**
+
+- Now if you want to create a soft link named soft1 for file.txt
+
+you just type:
+
+**ln -s file.txt soft1**
+
+- Now you should know three things about hardlinks
+
+(1) They have different inode number with reference to the original
+file
+(2) They have a smaller file size with reference to the original file
+(3) If you delete the original file, soft links will becom useless.
+
+- If you point to something that is not there, then you are crazy.
+
+### Examples: 
+
+@Vinayak18-roar ➜ /workspaces/VK18-Linux/Linux-basics/day5 (main) $ ln -s file.txt softlink1
+
+@Vinayak18-roar ➜ /workspaces/VK18-Linux/Linux-basics/day5 (main) $ ls -il
+
+total 12
+1573229 drwxrwxrwx+ 2 codespace codespace 4096 Feb 28 18:22 dir
+1573222 -rw-rw-rw-  2 codespace codespace  458 Feb 28 18:25 file.txt
+1573222 -rw-rw-rw-  2 codespace codespace  458 Feb 28 18:25 hardlink1
+1573163 -rw-rw-rw-  1 codespace codespace    0 Feb 27 06:54 practice.txt
+1573223 -rw-rw-rw-  1 codespace codespace    0 Feb 27 06:54 readme.md
+1573232 lrwxrwxrwx  1 codespace codespace    8 Feb 28 18:26 softlink1 -> file.txt
+
+## Soft link on folders
+
+- Soflink on folder -dir and it's small in size compare to orginal and inode number is not same.
+
+@Vinayak18-roar ➜ /workspaces/VK18-Linux/Linux-basics/day5 (main) $ ln -s dir softlinkdir
+
+@Vinayak18-roar ➜ /workspaces/VK18-Linux/Linux-basics/day5 (main) $ ls -il
+
+total 8
+1573229 drwxrwxrwx+ 2 codespace codespace 4096 Feb 28 18:22 dir
+1573222 -rw-rw-rw-  1 codespace codespace  458 Feb 28 18:25 hardlink1
+1573163 -rw-rw-rw-  1 codespace codespace    0 Feb 27 06:54 practice.txt
+1573223 -rw-rw-rw-  1 codespace codespace    0 Feb 27 06:54 readme.md
+1573232 lrwxrwxrwx  1 codespace codespace    8 Feb 28 18:26 softlink1 -> file.txt
+1573230 lrwxrwxrwx  1 codespace codespace    3 Feb 28 18:29 softlinkdir -> dir
+
+Refer image- ![softlink on dir](image-1.png)
+
+## NOTE:
+
+- As we already mentioned, if we delete orginal file then softlink become useless and hardlink will remain same.(Check below).
+
+Here i'm deleting the file.txt:
+
+@Vinayak18-roar ➜ /workspaces/VK18-Linux/Linux-basics/day5 (main) $ rm -rf file.txt
+
+@Vinayak18-roar ➜ /workspaces/VK18-Linux/Linux-basics/day5 (main) $ ls
+
+dir  hardlink1  practice.txt  readme.md  softlink1
+
+@Vinayak18-roar ➜ /workspaces/VK18-Linux/Linux-basics/day5 (main) $ ls -il
+
+total 8
+1573229 drwxrwxrwx+ 2 codespace codespace 4096 Feb 28 18:22 dir
+1573222 -rw-rw-rw-  1 codespace codespace  458 Feb 28 18:25 hardlink1
+1573163 -rw-rw-rw-  1 codespace codespace    0 Feb 27 06:54 practice.txt
+1573223 -rw-rw-rw-  1 codespace codespace    0 Feb 27 06:54 readme.md
+1573232 lrwxrwxrwx  1 codespace codespace    8 Feb 28 18:26 softlink1 -> file.txt
+![Refer image to see difference](image.png)
+
+## removed both orginal file(file.txt) and folder(dir).
+
+![Refer:](image-2.png)
