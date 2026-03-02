@@ -26,64 +26,77 @@ Because to create codespace need atleast one file in the repo. Otherwise, it'll 
 2) Click on Create Codespace (wait until VS Code opens).
 
 3) To menu: Terminal > New terminal.
+
     Test: pwd
 
 4) **Linux practice structure:**
-
 Run in terminal:
                 mkdir -p Linux-basics/day1
+
                 cd Linux-basics/day1
-Check:
+    Check:
+
         pwd
+
         ls
 
 5) **Git workflow** (Most IMP)
 
----[run in terminal in day1 directory]----
+    ---[run in terminal in day1 directory]----
 
-Git status check: --> git status 
+    Git status check: --> git status 
 
-It shows: Untracked files.
+    It shows: Untracked files.
 
-6) Run in terminal: --> git add .
+6) Run in terminal: 
+                    
+        --> git add .
 
-check: --> git status
+    check: 
+    
+        --> git status
 
-Now should show: Changes to be committed.
+    Now should show: Changes to be committed.
 
 7) **Only on FIRST TIME (Identity Set)**
 
-Note: If haven't done this before. Then only follow this step.
+    Note: If haven't done this before. Then only follow this step.
 
-Run: 
-    git config --global user.name "Your_Name"
+    Run: 
+    
+        git config --global user.name "Your_Name"
 
-    git config --global user.email "Your_Email_Id"
+        git config --global user.email "Your_Email_Id"
 
-(Do this only one time)
+    (Do this only one time)
 
 8) Commit
 
-Run:
-    git commit -m "Linux practice day1"
+    Run:
+    
+        git commit -m "Linux practice day1"
 
 9) **Push** (IMP)
 
-Run:
-    git push -u origin main
+    Run:
+    
+        git push -u origin main
 
-Note: On first push only we use : -u origin main
+    Note: On first push only we use : -u origin main
 
-----Successfully github codespace setup done-------------------
+--------Successfully github codespace setup done-------------------
 
 ## Daily habit (This build GREEN Graph)
 
 Run:
+
     git add .
+
     git commit -m "Give any name or write what you have done"
+    
     git push
 
-    
+
 
 
 
