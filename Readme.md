@@ -193,11 +193,17 @@ Run:
 
             need to reconcile divergent branches
 
+            or 
+
+            failed to push some refs
+
         Meaning:(both - remote and local)
 
             - New commits in remote
 
             - local also has new commits.
+
+            - Push rejected.
 
         Visual:
 
@@ -229,6 +235,7 @@ Run:
 
     3. Staged
 
+    4. Detached HEAD
 
     Case1: CLEAN
 
@@ -326,7 +333,46 @@ Run:
 
             git checkout main
             
-    
+ERORS:
+
+    1. Utracked files present
+
+        Error message:
+
+            Untracked file:
+
+        Meaning:
+
+            Git don't know about the file.
+
+        Solution:
+
+            git add <file>
+
+        Memory hook:
+
+            Untracked = add
+
+    2. FATAL : Not a git repository
+
+        Error message:
+
+            Fatal: not a git repository
+
+        meaning:
+
+            You're not inside the git repo.
+
+        Solution:
+
+            cd repo-folder
+
+            OR
+
+            git init
+          
+
+
 ## PRO TIPS:
 
     Step1:
@@ -346,11 +392,6 @@ Run:
     PRO mantra :
 
         Check the status --> Take decision --> run commands
-
-
-
-
-
 
 
 ## What is touch?
