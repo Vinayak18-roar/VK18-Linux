@@ -117,13 +117,13 @@ Run:
 
     iii. divereged --> rebase needed.
 
-3) 3 cases:
+3) Three cases:
 
     Case 1: BEHIND (pull needed)
 
         Error message:
 
-            Your branch is behing **origin/main** by 2 commits
+            Your branch is behind **origin/main** by 2 commits
 
         Meaning:
 
@@ -144,7 +144,108 @@ Run:
         Solution:
 
             git pull --rebase
-            
+
+        Memory hook:
+        
+            Bheind = pull first
+
+    Case 2: AHEAD (push needed)
+
+        Error message:
+
+            Your branch is ahead of **origin/main** by 1 commits
+
+        Meaning:
+
+            - Commited in local
+
+            - Not pushed in remote.
+
+        Visual:
+
+            Remote:
+
+                A - B
+
+            Local:
+
+                A - B - C
+
+        Solution:
+
+            git push
+    
+        Memory hook:
+
+            Ahead = Push
+    
+    Case3: Diverged (rebase needed) --> VVIMP
+
+        Error message:
+
+            Your branch and **origin/main** have diverged
+
+            or
+
+            non-fast-forward
+
+            or
+
+            need to reconcile divergent branches
+
+        Meaning:(both - remote and local)
+
+            - New commits in remote
+
+            - local also has new commits.
+
+        Visual:
+
+            Remote:
+
+                A - B - R
+
+            Local:
+
+                A - B - L
+
+                Here commit happened in both remote and local. Therefore, conflict chance is high.
+
+            Solution:
+
+                git pull --rebase
+
+                git push
+
+            Memory hook:
+
+                Diverged = Reabse & push
+    
+## PRO TIPS:
+
+    Step1:
+
+        git status
+
+    Step2: Read the message
+
+        If found:
+
+            - Behind --> pull
+
+            - Ahead  --> push
+
+            - Diverged --> rebase+push
+
+    PRO mantra :
+
+        Check the status --> Take decision --> run commands
+
+
+
+
+
+
 
 ## What is touch?
 
