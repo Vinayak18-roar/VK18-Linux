@@ -1,5 +1,24 @@
 Beginner-Friendly Linux
-# Day 2 - touch and mv Commands
+
+## SHELL?
+
+- Before starting to learn about the Linux command line, we have to know some terminology and facts.
+
+- The shell is the command line interpreter, meaning that it takes the commands that you enter and sends them to the operating system to perform (execute).
+
+- And so to make things clear, The shell is what actually handles the commands.
+
+- The **shell is the default interface to Linux.**
+
+## The Terminal
+
+- On the other hand, The **Terminal** is just a graphical interface to the shell. In other words, We access the shell through our terminal in a **GUI (Graphical User Interface)** environment.
+
+## Github codespaces setup
+
+- We are using github VScode codespaces to practice Linux Commands.
+
+- 
 
 ## What is touch?
 
