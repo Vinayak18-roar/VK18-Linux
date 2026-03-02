@@ -97,6 +97,43 @@ Run:
     git push
 
 
+## LOCAL vs REMOTE
+
+    Logic:
+
+        Local: Laptop folder
+
+        Remote: Google drive / Github
+
+    Main topic:
+
+        Local repository:
+
+            It's your machine / codespaces. Where you do all edit, add, commit. This is known as local repository.
+
+            Example:
+
+                /workspaces/VK18-Linux
+
+            - fast
+
+            - Private to you
+
+            - It will work on offline
+        
+        Remote repository:
+
+            Which is stored in github.(like cloud copy) known as remote repository.
+
+        Example:
+
+            origin --> github.com/Vinayak18-roar/VK18-Linux
+
+        - Cloud copy
+
+        - backup
+            
+
 ## Github ERROR Analyses:
 
 - Whenever "git push" failed then, follow 3 steps:
@@ -481,7 +518,57 @@ ERORS:
 
                 History mismatch = do rebase
 
+        4. Stash pop
 
+            Run:
+
+                git stash pop
+
+            Why?
+
+            - Whatever changes locked in stash for temporary purpose. Now we need to bring them back.
+
+            - If you not do this then it will disappear so need to do pop.
+
+            Memory hook:
+
+            - Stash (temprory lock) = pop (release from lock)
+
+        5. Add
+
+            Run:
+
+                git add .
+
+            why?
+
+            - Git commit only do for staged files.
+
+            Memory hook:
+
+            - Modify add --> Add first
+
+        6. Commit
+
+            Run:
+
+                git commit -m "message"
+
+            why?
+
+            -To add local chnages into history.
+
+        7. Push
+
+            Run:
+
+                git push
+
+            why?
+
+             - To algin both local and remote.
+
+--
 
 ## PRO TIPS:
 
