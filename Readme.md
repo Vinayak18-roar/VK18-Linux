@@ -353,6 +353,8 @@ ERORS:
 
             Untracked = add
 
+    ------------------------------------------------------------------------
+
     2. FATAL : Not a git repository
 
         Error message:
@@ -370,7 +372,115 @@ ERORS:
             OR
 
             git init
-          
+
+## CORE ERROR PROBLEM:
+
+    Error message:
+         
+         non-fast forward / failed to push some refs / Diverged branches
+
+    Meaning :
+
+        - local and remote or not in same state.
+
+    Visual: 
+
+        Remote: A - B
+
+        Local : A - C
+
+        - Git is saying mismatch in history.
+
+        - Visual clearly saying mismatch in remote and local.
+    
+    Our main goal in visual:
+
+        Remote:
+
+            A -B -C
+
+        Local:
+
+            A -B -C
+        
+        - Both should be in same line
+
+    Solutions:
+
+        1. Go to repo root
+
+            Run:
+
+                cd /workspaces/VK18-Linux
+
+            Why?
+
+            - Git commands is safest in repo root.
+
+            Beacuse:
+            
+            - If not in repo root - some files will miss.
+
+            - Relative path issue will come
+
+            Memory hook:
+
+                Repo root = safe git
+
+        2. Stash
+
+            Run:
+
+                git stash
+
+            Why?
+
+            - local was uncommitted so we need to pull therefore need to do stash.
+
+            Problem:
+
+            - If working directory is dirty then git will not pull.
+
+            What stash will do?
+
+            - It will place it in temporary locker.
+
+            Memoery hook:
+
+                Before push - stasj=h shield
+
+        3. Pull with rebase
+
+            Run:
+
+                git pull origin main --rebase
+
+            Why?
+
+            - It's main fix
+
+            - Because remote was in AHEAD situation or diverged branches so.
+
+            What rebas ewill do?
+
+            - It rewrites the hotory cleanly.
+
+            Before:
+
+                Remote: A - B
+
+                local: A - C
+
+            After:
+
+                Remote: A - B - C
+
+                local: A - B - C
+
+            Memory hook:
+
+                History mismatch = do rebase
+
 
 
 ## PRO TIPS:
