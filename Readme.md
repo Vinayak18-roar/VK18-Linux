@@ -132,7 +132,43 @@ Run:
         - Cloud copy
 
         - backup
-            
+
+## DATA FLOW
+
+    When you run:
+
+        git push
+
+    Then it will flow from LOCAL to REMOTE
+
+    when you run:
+
+        git pull
+
+    Then it will flow from REMOTE to LOCAL. It means github latest changes will come to local.
+
+    EXAMPLE:
+
+        step1. When you edit the file: 
+
+            echo "hello" > file.txt
+
+           - It's only local changes.
+
+        step2. when you do commit:
+
+            git add .
+
+            git commit -m "added file"
+
+            - Still LOCAL changes.
+
+        Step3. When you do push:
+
+            git push
+
+            - Now it will do change in REMOTE.
+
 
 ## Github ERROR Analyses:
 
