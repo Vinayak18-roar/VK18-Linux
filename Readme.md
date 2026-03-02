@@ -220,6 +220,112 @@ Run:
             Memory hook:
 
                 Diverged = Reabse & push
+
+4) Extra cases:
+
+    1. Clean
+
+    2. Not staged
+
+    3. Staged
+
+
+    Case1: CLEAN
+
+        Error message:
+
+            Nothing to commit, working tree clean
+
+        Meaning:
+
+            - All commit is done.
+
+            - May be push is pending
+
+            - All already synced successfully
+
+        Solution:
+
+            Check Ahead/behind and based on this take a step.
+
+    Csae2: NOT STAGED
+
+        Error message:
+
+            Changes not staged for commit :
+
+            modified: Readme.md
+
+        Meaning:
+
+            - File changed
+
+            - Not added to git
+
+            - Git will not commit it
+
+        Visual:
+
+            working directory --> changed
+
+            staging area --> empty
+
+        Solution:
+
+            git add .
+
+            git commit -m "Write here what you have done"
+
+            git push
+
+        Memory hook:
+
+            Modify --> Add first
+
+    Case3: STAGED (ready to commit)
+
+        Error message:
+
+            Changes to be committed:
+
+            newfile: file.txt
+
+        Meaning: 
+
+            - git add is done but haven't committed yet
+
+        Visual:
+
+            working --> staged
+
+            commit --> pending
+
+        Solution:
+
+            git commit -m "message"
+
+            git push
+
+        Memory hook:
+
+            Staged --> commit
+
+    Case 4: Detached HEAD
+
+        Error message:
+
+            You are not currently on a branch
+        
+        Meaning:
+
+            - This will appear after REBASE/CHECKOUT
+
+            - Push will fail
+
+        Solution:
+
+            git checkout main
+            
     
 ## PRO TIPS:
 
