@@ -29,6 +29,7 @@ Because to create codespace need atleast one file in the repo. Otherwise, it'll 
     Test: pwd
 
 4) **Linux practice structure:**
+
 Run in terminal:
                 mkdir -p Linux-basics/day1
                 cd Linux-basics/day1
