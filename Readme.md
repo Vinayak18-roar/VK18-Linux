@@ -93,11 +93,8 @@ Run:
     git add .
 
     git commit -m "Give any name or write what you have done"
-    
+
     git push
-
-
-
 
 
 ## What is touch?
