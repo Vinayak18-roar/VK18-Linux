@@ -97,6 +97,55 @@ Run:
     git push
 
 
+## Github ERROR Analyses:
+
+- Whenever "git push" failed then, follow 3 steps:
+
+1) Status check:
+
+    Run:
+
+        git status
+
+2) Ahead/behind check:
+
+    Check below messages after status check
+
+    i. behind --> pull needed
+
+    ii. ahead --> push needed
+
+    iii. divereged --> rebase needed.
+
+3) 3 cases:
+
+    Case 1: BEHIND (pull needed)
+
+        Error message:
+
+            Your branch is behing **origin/main** by 2 commits
+
+        Meaning:
+
+            - In remote, there is new commits.
+
+            - In local there is no commits.
+
+        Visual:
+
+            Remote :
+
+                A - B - C
+
+            Local :
+
+                A - B
+
+        Solution:
+
+            git pull --rebase
+            
+
 ## What is touch?
 
 The touch command is used to create empty files in Linux.
