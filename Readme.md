@@ -672,3 +672,39 @@ Contents of file1 unchanged but file contents erased.
 
 Remember: Whenever using mv between two files check whether do you want contents of destination file or not.
 
+# Shortcuts
+
+## Examples
+
+    1. ctrl+A:
+
+        -To go at the beginning of the sentence.
+    
+    2. ctrl+E:
+
+        -To go at the end of the sentnce.
+
+    3. ctrl+D:
+
+        -It will help to delete the character where cursor stands on.
+
+    4. ctrl+U:
+
+        -To erase whole sentences.
+    
+    5. ctrl+Y:
+
+        -To Undo the deleted sentences.
+
+    6. Alt+F:
+
+        -Helps to go forward for each words in the sentences.
+
+    7. Alt+B:
+
+        -Helps to go backward for each words in the sentences.
+
+    8. Alt+U:
+
+        -It helps to make uppa-case for each words.(just place cursor begining of each word)
+    
